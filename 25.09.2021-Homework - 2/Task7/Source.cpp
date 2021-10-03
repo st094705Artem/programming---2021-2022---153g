@@ -4,16 +4,18 @@ using namespace std;
 
 int main(int argc, char* argv[]) 
 {
-	int N = 0;
-	int M = 0;
-	int K = 0;
-	cin >> N >> M >> K;
-	int t = K / M;
-	int y = K / N;
-	if (((K%M == 0 && K%t == 0) || (K%N == 0 && K%y == 0)) && K < M*N) {
+	int n = 0;
+	int m = 0;
+	int k = 0;
+	cin >> n >> m >> k;
+	int t = k / m;
+	int y = k / n;
+	if (((k%m == 0 && K%t == 0) || (k%n == 0 && k%y == 0)) && k < m*n) 
+	{
 		cout << "YES";
 	}
-	else {
+	else 
+	{
 		cout << "NO";
 	}
 	return EXIT_SUCCESS;

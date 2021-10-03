@@ -4,11 +4,11 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int M = 0;
-	int N = 0;
+	int m = 0;
+	int n = 0;
 	int x = 0;
 	int y = 0;
-	cin >> M >> N >> x >> y;
+	cin >> m >> n >> x >> y;
 	int a1 = x - 1;
 	int a2 = x + 1;
 	int b1 = y - 1;
@@ -16,13 +16,13 @@ int main(int argc, char* argv[])
 	if (a1 >  0) {
 		cout << a1 << " " << y << endl;
 	}
-	if (a2 <= M) {
+	if (a2 <= m) {
 		cout << a2 << " " << y << endl;
 	}
 	if (b1 > 0) {
 		cout << x << " " <<  b1 << endl;
 	}
-	if (b2 <= N) {
+	if (b2 <= n) {
 		cout << x << " " << b2 << endl;
 	}
 	return EXIT_SUCCESS;

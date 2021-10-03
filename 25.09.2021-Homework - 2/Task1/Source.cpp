@@ -11,8 +11,10 @@ int main(int argc, char* argv[])
 	int k = a / 100;
 	int l = (a - k * 100) / 10;
 	int j = a - k * 100 - l * 10;
-	if (a != 0) {
-		if (a >= 100) {
+	if (a != 0) 
+	{
+		if (a >= 100) 
+		{
 			switch (k)
 			{
 			case 1:
@@ -44,11 +46,13 @@ int main(int argc, char* argv[])
 				break;
 			}
 		}
-		else {
+		else 
+		{
 			cout << "";
 		}
 
-		if (l != 1) {
+		if (l != 1)
+		{
 			switch (l)
 			{
 			case 0:
@@ -113,7 +117,8 @@ int main(int argc, char* argv[])
 				break;
 			}
 		}
-		else {
+		else
+		{
 			switch (j)
 			{
 			case 1:
@@ -146,7 +151,8 @@ int main(int argc, char* argv[])
 			}
 		}
 	}
-	else {
+	else
+ {
 		cout << "Ноль бананов";
 	}
 	return EXIT_SUCCESS;

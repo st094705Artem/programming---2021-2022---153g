@@ -4,15 +4,15 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int k = 0;
-	cin >> k;
-	if (k % 4 == 0 & k > 1 || k == 1) 
+	int n = 0;
+	int i = 1;
+	int a = 1;
+	cin >> n;
+	while (i <= n)
 	{
-		cout << "YES";
+		a = 2 * a;
+		++i;
 	}
-	else 
-	{
-		cout << "NO";
-	}
+	cout << a;
 	return EXIT_SUCCESS;
 }

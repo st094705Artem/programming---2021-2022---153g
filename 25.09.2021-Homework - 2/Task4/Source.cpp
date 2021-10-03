@@ -9,16 +9,20 @@ int main(int argc, char* argv[])
 	int c = 0;
 	int d = 0;
 	cin >> a >> b >> c >> d;
-	if (a != 0 && c != 0 && b%a == 0 && b*c != a * d) {
+	if (a != 0 && c != 0 && b%a == 0 && b*c != a * d) 
+	{
 		cout << -(b / a);
 	}
-	else if (a != 0 && c == 0 && b%a == 0) {
+	else if (a != 0 && c == 0 && b%a == 0) 
+	{
 		cout << -(b / a);
 	}
-	else if (a == 0 && b == 0) {
+	else if (a == 0 && b == 0) 
+	{
 		cout << "INF";
 	}
-	else {
+	else 
+	{
 		cout << "NO";
 	}
 	return EXIT_SUCCESS;

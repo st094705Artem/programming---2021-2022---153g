@@ -11,17 +11,22 @@ int main(int argc, char* argv[])
 	int t = (a*a + b * b - c * c);
 	int p = (c*c + b * b - a * a);
 	int m = (a*a + c * c - b * b);
-	if (a >= b + c || b >= a + c || c >= a + b) {
+	if (a >= b + c || b >= a + c || c >= a + b) 
+	{
 		cout << "impossible";
 	}
-	else if (a < b + c && b < a + c && c < a + b) {
-		if (a*a == b * b + c * c || b * b == c * c + a * a || c * c == a * a + b * b) {
+	else if (a < b + c && b < a + c && c < a + b) 
+	{
+		if (a*a == b * b + c * c || b * b == c * c + a * a || c * c == a * a + b * b) 
+		{
 			cout << "right ";
 		}
-		else if (t > 0 && p > 0 && m > 0) {
+		else if (t > 0 && p > 0 && m > 0) 
+		{
 			cout << "acute";
 		}
-		else {
+		else 
+		{
 			cout << "obtuse";
 		}
 	}
