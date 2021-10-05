@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 	cin >> a >> b >> c >> d;
 	while (x <= 1000)
 	{
-		if (a*x*x*x + b * x*x + c * x + d == 0)
+		if (a * x * x * x + b * x * x + c * x + d == 0)
 		{
 			cout << x << " ";
 		}
