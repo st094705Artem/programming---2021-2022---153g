@@ -254,6 +254,12 @@ std::ostream& operator<<(std::ostream& stream, const Fraction& fr)
 {
 	long long nodnum = abs(fr.numerator);
 	long long nodden = abs(fr.denominator);
+	if (nodnum == 0)
+	{
+		nodden = 1;
+	}
+	else 
+	{ 
 	while (nodnum != nodden)
 	{
 		if (nodnum > nodden)
@@ -264,6 +270,7 @@ std::ostream& operator<<(std::ostream& stream, const Fraction& fr)
 		{
 			nodden = nodden - nodnum;
 		}
+	}
 	}
 	long long c = nodden;
 	long long a = fr.numerator / c;
