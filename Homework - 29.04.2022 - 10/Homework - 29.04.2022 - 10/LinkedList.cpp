@@ -142,109 +142,120 @@ int LinkedList::extract(int index)
 
 void LinkedList::swap(int index1, int index2)
 {
-	if (index1 > index2)
-	{
-		int a = 0;
-		a = index1;
-		index1 = index2;
-		index2 = a;
-	}
-	else if (index1 == index2)
+	if (tail == nullptr)
 	{
 		return;
 	}
-
-	if (index1 < 0 && index2 < 0)
+	else if (count == 1)
 	{
 		return;
-	}
-	else if (index1 < 0 && index2 > 0 && index2 <= count)
-	{
-		index1 = 1;
-		index2 = index2;
-	}
-	else if (index1 < 0 && index2 > count)
-	{
-		index1 = 1;
-		index2 = count;
-	}
-	else if (index1 > 0 && index1 <= count && index2 > 0 && index2 <= count)
-	{
-		index1 = index1;
-		index2 = index2;
-	}
-	else if (index1 > 0 && index1 <= count && index2 > count)
-	{
-		index1 = index1;
-		index2 = count;
-	}
-	else if (index1 > count && index2 > count)
-	{
-		return;
-	}
-
-
-
-	if (index2 - index1 == 1)
-	{
-		int value = extract(index2);
-		insert(value, index1);
-	}
-	else if (index1 == 1 && index2 == count)
-	{
-		Node* temp2 = nodeByIndex(index2);
-		Node* a1 = head;
-		Node* b1 = head->next;
-		Node* a2 = temp2->next;
-		Node* b2 = temp2->next->next;
-
-		head = a2;
-		head->next = b1;
-		temp2->next = a1;
-		temp2->next->next = b2;
-		tail = temp2->next;
-	}
-	else if (index2 == count)
-	{
-		Node* temp1 = nodeByIndex(index1);
-		Node* temp2 = nodeByIndex(index2);
-		Node* a1 = temp1->next;
-		Node* a2 = temp2->next;
-		Node* b1 = temp1->next->next;
-		Node* b2 = temp2->next->next;
-
-		temp1->next = a2;
-		temp1->next->next = b1;
-		temp2->next = a1;
-		temp2->next->next = b2;
-		tail = temp1->next;
-	}
-	else if (index1 == 1)
-	{
-		Node* temp2 = nodeByIndex(index2);
-		Node* a1 = head;
-		Node* b1 = head->next;
-		Node* a2 = temp2->next;
-		Node* b2 = temp2->next->next;
-
-		head = a2;
-		head->next = b1;
-		temp2->next = a1;
-		temp2->next->next = b2;
 	}
 	else
 	{
-		Node* temp1 = nodeByIndex(index1);
-		Node* temp2 = nodeByIndex(index2);
-		Node* a1 = temp1->next;
-		Node* a2 = temp2->next;
-		Node* b1 = temp1->next->next;
-		Node* b2 = temp2->next->next;
+		if (index1 > index2)
+		{
+			int a = 0;
+			a = index1;
+			index1 = index2;
+			index2 = a;
+		}
+		else if (index1 == index2)
+		{
+			return;
+		}
 
-		temp1->next = a2;
-		temp1->next->next = b1;
-		temp2->next = a1;
-		temp2->next->next = b2;
+		if (index1 < 0 && index2 < 0)
+		{
+			return;
+		}
+		else if (index1 < 0 && index2 > 0 && index2 <= count)
+		{
+			index1 = 1;
+			index2 = index2;
+		}
+		else if (index1 < 0 && index2 > count)
+		{
+			index1 = 1;
+			index2 = count;
+		}
+		else if (index1 > 0 && index1 <= count && index2 > 0 && index2 <= count)
+		{
+			index1 = index1;
+			index2 = index2;
+		}
+		else if (index1 > 0 && index1 <= count && index2 > count)
+		{
+			index1 = index1;
+			index2 = count;
+		}
+		else if (index1 > count && index2 > count)
+		{
+			return;
+		}
+
+
+
+		if (index2 - index1 == 1)
+		{
+			int value = extract(index2);
+			insert(value, index1);
+		}
+		else if (index1 == 1 && index2 == count)
+		{
+			Node* temp2 = nodeByIndex(index2);
+			Node* a1 = head;
+			Node* b1 = head->next;
+			Node* a2 = temp2->next;
+			Node* b2 = temp2->next->next;
+
+			head = a2;
+			head->next = b1;
+			temp2->next = a1;
+			temp2->next->next = b2;
+			tail = temp2->next;
+		}
+		else if (index2 == count)
+		{
+			Node* temp1 = nodeByIndex(index1);
+			Node* temp2 = nodeByIndex(index2);
+			Node* a1 = temp1->next;
+			Node* a2 = temp2->next;
+			Node* b1 = temp1->next->next;
+			Node* b2 = temp2->next->next;
+
+			temp1->next = a2;
+			temp1->next->next = b1;
+			temp2->next = a1;
+			temp2->next->next = b2;
+			tail = temp1->next;
+		}
+		else if (index1 == 1)
+		{
+			Node* temp2 = nodeByIndex(index2);
+			Node* a1 = head;
+			Node* b1 = head->next;
+			Node* a2 = temp2->next;
+			Node* b2 = temp2->next->next;
+
+			head = a2;
+			head->next = b1;
+			temp2->next = a1;
+			temp2->next->next = b2;
+		}
+		else
+		{
+			Node* temp1 = nodeByIndex(index1);
+			Node* temp2 = nodeByIndex(index2);
+			Node* a1 = temp1->next;
+			Node* a2 = temp2->next;
+			Node* b1 = temp1->next->next;
+			Node* b2 = temp2->next->next;
+
+			temp1->next = a2;
+			temp1->next->next = b1;
+			temp2->next = a1;
+			temp2->next->next = b2;
+		}
 	}
 }
 
